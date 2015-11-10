@@ -2,9 +2,11 @@
 /*---> GLOBALS <------------------------------*/
 /*--------------------------------------------*/
 
-@mainColor: orange;
+@mainColor: #DC1200;
 @mainDark: darken(@mainColor, 10%);
 @mainLight: lighten(@mainColor, 10%);
+
+@charcoal: #1A1A1A;
 
 @textSize: 5vh;
 
@@ -33,6 +35,11 @@ footer{
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	z-index: 100;
+}
+
+.AnimateAll(@time: 0.5s){
+	transition: all @time ease;
+	-webkit-transition: all @time ease;
 }
 
 /*--------------------------------------------*/
@@ -74,3 +81,28 @@ h1.title{
 /*--------------------------------------------*/
 /*---> FORMS <--------------------------------*/
 /*--------------------------------------------*/
+
+button, input, textarea, select{
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	font-family: @bodyFont;
+}
+
+button{
+
+	width: 50vw;
+	height: 2.0 * @textSize;
+	margin: (0.5 * @textSize) 25vw;
+	background: @mainColor;
+	color: white;
+	font-family: @headFont;
+	border-radius: 0.25 * @textSize;
+
+	&:hover{
+		background: @charcoal;
+	}
+
+	.AnimateAll();
+
+}
