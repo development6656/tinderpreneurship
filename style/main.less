@@ -33,7 +33,7 @@ footer{
 	background: url('img/ceocitybannercolor.png');
 	background-size: auto @footerHeight;
 	background-repeat: no-repeat;
-	background-position: left bottom;
+	background-position: 2.5% bottom;
 	z-index: 100;
 }
 
@@ -107,11 +107,19 @@ button{
 
 }
 
+label.checkSquareLabel{
+	background: blue;
+	width: 40vw;
+	height: 2.0 * @textSize;
+	display: inline-block;
+}
+
 div.checkSquare{
 
-	background: orange;
-	height: 20px;
-	width: 20px;
+	background: red;
+	height: 1.0 * @textSize;
+	width: 1.0 * @textSize;
+	display: inline-block;
 
 	input[type="checkbox"]{
 		//display: none;
@@ -119,10 +127,14 @@ div.checkSquare{
 
 }
 
-label.checkSquareLabel{
-	background: red;
+div.checkSquare:active{
+	background: black;
 }
 
 input[type="checkbox"]{
-	border: 10px solid green;
+	display: none;
+}
+
+input[type="checkbox"]:checked + div.checkSquare{
+	background: green;
 }

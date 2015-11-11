@@ -4,8 +4,9 @@
 	<head>
 		<title>Tinderpreneurship</title>
 		<!-- STYLESHEETS -->
-		<!--<link rel="stylesheet" type="text/css" href="style/reset.css">-->
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
 		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One|Source+Sans+Pro:400,400italic,900' rel='stylesheet' type='text/css'>
 		<!-- IMPORTED SCRIPTS -->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
@@ -28,28 +29,25 @@
 
 		<form id="profile-strengths">
 			<label class="checkSquareLabel">
-				<div class="checkSquare">
-					<input type="checkbox" name="strength" value="pitching">
-				</div>
-				Pitching
-			</label>
-			<label class="checkSquareLabel">
-				<div class="checkSquare">
-					<input type="checkbox" name="strength" value="databases">
-				</div>
-				Databases
-			</label>
-			<label class="checkSquareLabel">
-				<div class="checkSquare">
-					<input type="checkbox" name="strength" value="business-models">
-				</div>
-				Business Models
+				<input type="checkbox" name="strength" value="sample">
+				<div class="checkSquare"></div>
+				Sample
 			</label>
 			<script>
 				document.write(createHTMLCheckbox({
 					name: 'strength',
+					value: 'Public Speaking',
+					checked: false
+				}));
+				document.write(createHTMLCheckbox({
+					name: 'strength',
+					value: 'Business Models',
+					checked: false
+				}));
+				document.write(createHTMLCheckbox({
+					name: 'strength',
 					value: 'Hello World',
-					checked: true
+					checked: false
 				}));
 			</script>
 		</form>
