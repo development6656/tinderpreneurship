@@ -21,11 +21,17 @@ html{
 	color: white;
 	background: lighten(black, 5%) url('img/citymazediagonaltrans.png');
 	background-size: 50vh;
-	overflow-x: hidden;
+	//overflow-x: hidden;
 }
 
+body{
+	width: 50vw;
+	margin: 0 auto;
+}
+
+@footerHeight: 15vh;
+
 footer{
-	@footerHeight: 15vh;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -37,6 +43,10 @@ footer{
 	background-position: 2.5% bottom;
 	z-index: 100;
 }
+
+	div.footerSpace{
+		height: @footerHeight;
+	}
 
 .AnimateAll(@time: 0.5s){
 	transition: all @time ease;
@@ -96,16 +106,14 @@ button, input, textarea, select, label{
 }
 
 form.checkboxForm{
-	width: 98vw;
-	margin: 0 auto;
+	width: 50vw;
 }
-
 
 button{
 
-	width: 80vw;
+	width: 90&;
 	height: 2.0 * @textSize;
-	margin: (1.0 * @textSize) 10vw;
+	margin: (1.0 * @textSize) auto;
 	background: @mainColor;
 	color: white;
 	font-family: @headFont;
@@ -118,6 +126,11 @@ button{
 
 	.AnimateAll();
 
+}
+
+textarea{
+	width: 90%;
+	margin: (1.0 * @textSize) auto;
 }
 
 label.checkSquareLabel{
