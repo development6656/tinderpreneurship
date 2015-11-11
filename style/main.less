@@ -29,6 +29,12 @@ body{
 	margin: 0 auto;
 }
 
+img.logo{
+	width: 80%;
+	margin: @textSize auto;
+	margin-bottom: 0.5 * @textSize;
+}
+
 @footerHeight: 15vh;
 
 footer{
@@ -38,7 +44,7 @@ footer{
 	left: 0;
 	height: @footerHeight;
 	width: 100vw;
-	background: url('img/ceocitybannercolor.png');
+	background: url('img/ceocitybannercolorblur.png');
 	background-size: auto @footerHeight;
 	background-repeat: no-repeat;
 	background-position: 2.5% bottom;
@@ -101,6 +107,13 @@ h1.title{
 	color: #dc1200;
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 	text-transform: uppercase;
+}
+
+p{
+	text-align: center;
+	font-size: 0.75 * @textSize;
+	line-height: 1.10 * @textSize;
+	margin: 0.50 * @textSize;
 }
 
 /*--------------------------------------------*/
@@ -184,4 +197,47 @@ input[type="checkbox"]{
 
 input[type="checkbox"]:checked + div.checkSquare{
 	background: @mainColor;
+}
+
+/*--------------------------------------------*/
+/*---> SCROLLBAR <----------------------------*/
+/*--------------------------------------------*/
+
+@scrollBar: @mainColor;
+@scrollBarBack: transparent;
+
+::-webkit-scrollbar{
+	width: 10px;
+	height: 10px;
+	background: @scrollBarBack;
+	z-index: 50;
+}
+
+::-webkit-scrollbar-button{
+	background: @scrollBarBack;
+}
+
+::-webkit-scrollbar-track{
+	background: @scrollBarBack;
+}
+
+::-webkit-scrollbar-track-piece{
+	background: @scrollBarBack;
+}
+
+::-webkit-scrollbar-thumb{
+	background: @scrollBar;
+	border-radius: 5px;
+	position: absolute;
+	margin-left: -10px;
+}
+
+::-webkit-scrollbar-corner{
+	width: 10px;
+	height: 10px;
+	background: @scrollBarBack;
+}
+
+::-webkit-resizer{
+	background: @scrollBarBack;
 }
