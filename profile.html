@@ -12,6 +12,10 @@
 		<!-- FIRECHAT FILES -->
 		<link rel='stylesheet' href='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css' />
 		<script src='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js'></script>
+		<!-- NATIVE SCRIPTS -->
+		<script type="text/javascript" src="lib/utils.js"></script>
+		<script type="text/javascript" src="lib/googleAuth.js"></script>
+		<script type="text/javascript" src="lib/profile.js"></script>
 		<style type="text/css">
 
 
@@ -23,32 +27,34 @@
 		<button onclick="googleLogin();">Login with Google</button>
 
 		<form id="profile-strengths">
-			<label>
+			<label class="checkSquareLabel">
 				<div class="checkSquare">
 					<input type="checkbox" name="strength" value="pitching">
 				</div>
 				Pitching
 			</label>
-			<label>
+			<label class="checkSquareLabel">
 				<div class="checkSquare">
 					<input type="checkbox" name="strength" value="databases">
 				</div>
 				Databases
 			</label>
-			<label>
+			<label class="checkSquareLabel">
 				<div class="checkSquare">
 					<input type="checkbox" name="strength" value="business-models">
 				</div>
 				Business Models
 			</label>
+			<script>
+				document.write(createHTMLCheckbox({
+					name: 'strength',
+					value: 'Hello World',
+					checked: true
+				}));
+			</script>
 		</form>
 
 		<footer></footer>
-
-		<!-- NATIVE SCRIPTS -->
-		<script type="text/javascript" src="lib/utils.js"></script>
-		<script type="text/javascript" src="lib/googleAuth.js"></script>
-		<script type="text/javascript" src="lib/profile.js"></script>
 
 		<script type="text/javascript">
 
