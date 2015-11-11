@@ -97,12 +97,13 @@ form.checkboxForm{
 
 button{
 
-	width: 50vw;
+	width: 80vw;
 	height: 2.0 * @textSize;
-	margin: (0.5 * @textSize) 25vw;
+	margin: (1.0 * @textSize) 10vw;
 	background: @mainColor;
 	color: white;
 	font-family: @headFont;
+	font-size: 0.75 * @textSize;
 	border-radius: 0.25 * @textSize;
 
 	&:hover{
@@ -115,7 +116,7 @@ button{
 
 label.checkSquareLabel{
 	background: transparent;
-	//width: 47vw;
+	//width: 40vh;
 	margin: 1vw;
 	height: 1.25 * @textSize;
 	line-height: 1.25 * @textSize;
@@ -129,9 +130,7 @@ div.checkSquare{
 	border: (0.05 * @textSize) solid red;
 	height: 0.55 * @textSize;
 	width: 0.55 * @textSize;
-	margin-top: 0.25 * @textSize;
-	margin-left: 0.25 * @textSize;
-	margin-right: 0.25 * @textSize;
+	margin: auto (0.25 * @textSize);
 	display: inline-block;
 
 	input[type="checkbox"]{
