@@ -27,32 +27,38 @@
 
 		<button onclick="googleLogin();">Login with Google</button>
 
-<center>
+		<h2>What skills do you bring to a team?</h2>
 		<form class="checkboxForm" id="profile-strengths">
+			<center>
 			<script>
-				document.write(createHTMLCheckbox({
-					name: 'strength',
-					value: 'Public Speaking',
-					checked: false
-				}));
-				document.write(createHTMLCheckbox({
-					name: 'strength',
-					value: 'Business Models',
-					checked: false
-				}));
-				document.write(createHTMLCheckbox({
-					name: 'strength',
-					value: 'Hello World',
-					checked: false
-				}));
-				document.write(createHTMLCheckbox({
-					name: 'strength',
-					value: 'Graphic Design',
-					checked: false
-				}));
+				var size = skills.length;
+				for(var s = 0; s < size; s++){
+					document.write(createHTMLCheckbox({
+						name: 'strength',
+						value: skills[s],
+						checked: false
+					}));
+				}
 			</script>
+			</center>
 		</form>
-</center>
+
+		<h2>What skills do you desire in teammates?</h2>
+		<form class="checkboxForm" id="profile-desires">
+			<center>
+			<script>
+				var size = skills.length;
+				for(var s = 0; s < size; s++){
+					document.write(createHTMLCheckbox({
+						name: 'desire',
+						value: skills[s],
+						checked: false
+					}));
+				}
+			</script>
+			</center>
+		</form>
+
 		<footer></footer>
 
 		<script type="text/javascript">
