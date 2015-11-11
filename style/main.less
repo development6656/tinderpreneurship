@@ -89,6 +89,12 @@ button, input, textarea, select, label{
 	font-family: @bodyFont;
 }
 
+form.checkboxForm{
+	width: 98vw;
+	margin: 0 auto;
+}
+
+
 button{
 
 	width: 50vw;
@@ -108,17 +114,23 @@ button{
 }
 
 label.checkSquareLabel{
-	background: blue;
-	width: 40vw;
-	height: 2.0 * @textSize;
+	background: transparent;
+	//width: 47vw;
+	margin: 1vw;
+	height: 1.25 * @textSize;
+	line-height: 1.25 * @textSize;
+	font-size: 0.5 * @textSize;
 	display: inline-block;
 }
 
 div.checkSquare{
 
 	background: red;
-	height: 1.0 * @textSize;
-	width: 1.0 * @textSize;
+	height: 0.55 * @textSize;
+	width: 0.55 * @textSize;
+	margin-top: 0.35 * @textSize;
+	margin-left: 0.35 * @textSize;
+	margin-right: 0.35 * @textSize;
 	display: inline-block;
 
 	input[type="checkbox"]{

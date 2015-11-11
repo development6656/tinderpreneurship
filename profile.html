@@ -27,12 +27,7 @@
 
 		<button onclick="googleLogin();">Login with Google</button>
 
-		<form id="profile-strengths">
-			<label class="checkSquareLabel">
-				<input type="checkbox" name="strength" value="sample">
-				<div class="checkSquare"></div>
-				Sample
-			</label>
+		<form class="checkboxForm" id="profile-strengths">
 			<script>
 				document.write(createHTMLCheckbox({
 					name: 'strength',
@@ -47,6 +42,11 @@
 				document.write(createHTMLCheckbox({
 					name: 'strength',
 					value: 'Hello World',
+					checked: false
+				}));
+				document.write(createHTMLCheckbox({
+					name: 'strength',
+					value: 'Graphic Design',
 					checked: false
 				}));
 			</script>
