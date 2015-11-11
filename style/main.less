@@ -125,22 +125,21 @@ label.checkSquareLabel{
 
 div.checkSquare{
 
-	background: red;
+	background: transparent;
+	border: (0.05 * @textSize) solid red;
 	height: 0.55 * @textSize;
 	width: 0.55 * @textSize;
-	margin-top: 0.35 * @textSize;
-	margin-left: 0.35 * @textSize;
-	margin-right: 0.35 * @textSize;
+	margin-top: 0.25 * @textSize;
+	margin-left: 0.25 * @textSize;
+	margin-right: 0.25 * @textSize;
 	display: inline-block;
 
 	input[type="checkbox"]{
 		//display: none;
 	}
 
-}
+	.AnimateAll();
 
-div.checkSquare:active{
-	background: black;
 }
 
 input[type="checkbox"]{
@@ -148,5 +147,5 @@ input[type="checkbox"]{
 }
 
 input[type="checkbox"]:checked + div.checkSquare{
-	background: green;
+	background: @mainColor;
 }
