@@ -32,6 +32,7 @@ body{
 @footerHeight: 15vh;
 
 footer{
+
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -42,6 +43,14 @@ footer{
 	background-repeat: no-repeat;
 	background-position: 2.5% bottom;
 	z-index: 100;
+
+	address{
+		font-size: 0.35 * @textSize;
+		position: fixed;
+		bottom: 0.15 * @textSize;
+		right: 0.15 * @textSize;
+	}
+
 }
 
 	div.footerSpace{
@@ -57,7 +66,7 @@ footer{
 /*---> TEXT <---------------------------------*/
 /*--------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6, p, ul, li{
+h1, h2, h3, h4, h5, h6, p, ul, li, address{
 	font-family: @bodyFont;
 	font-size: @textSize;
 }
@@ -112,7 +121,8 @@ form.checkboxForm{
 
 button{
 
-	width: 90&;
+	width: 92&;
+	padding: 0 4%;
 	height: 2.0 * @textSize;
 	margin: (1.0 * @textSize) auto;
 	background: @mainColor;
