@@ -25,7 +25,7 @@ html{
 }
 
 body{
-	width: 50vw;
+	width: 95%;
 	margin: 0 auto;
 }
 
@@ -106,7 +106,8 @@ button, input, textarea, select, label{
 }
 
 form.checkboxForm{
-	width: 50vw;
+	width: 100%;
+	margin: (1.0 * @textSize) auto;
 }
 
 button{
@@ -129,8 +130,15 @@ button{
 }
 
 textarea{
-	width: 90%;
+	min-width: 90%;
+	max-width: 90%;
+	padding: 5%;
+	border: (0.15 * @textSize) solid @mainColor;
 	margin: (1.0 * @textSize) auto;
+	font-size: @textSize;
+	line-height: 1.15 * @textSize;
+	color: white;
+	background: transparent;
 }
 
 label.checkSquareLabel{
@@ -146,7 +154,7 @@ label.checkSquareLabel{
 div.checkSquare{
 
 	background: transparent;
-	border: (0.05 * @textSize) solid red;
+	border: (0.10 * @textSize) solid @mainColor;
 	height: 0.55 * @textSize;
 	width: 0.55 * @textSize;
 	margin: auto (0.25 * @textSize);
