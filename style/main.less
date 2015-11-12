@@ -29,11 +29,25 @@ body{
 	margin: 0 auto;
 }
 
-img.logo{
-	width: 80%;
-	margin: @textSize auto;
-	margin-bottom: 0.5 * @textSize;
-}
+@headerHeight: 10vh;
+
+/*header{
+
+	position: fixed;
+	width: 100vw;
+	height: 1.5 * @headerHeight;
+	top: 0;
+	left: 0;
+	background: @mainColor;
+
+	img.logo{
+		//width: 80%;
+		height: @headerHeight;
+		margin: @textSize auto;
+		margin-bottom: 0.5 * @textSize;
+	}
+
+}*/
 
 @footerHeight: 15vh;
 
@@ -156,7 +170,7 @@ textarea{
 	min-width: 90%;
 	max-width: 90%;
 	padding: 5%;
-	border: (0.15 * @textSize) solid @mainColor;
+	border: (0.15 * @textSize) solid white;
 	margin: (1.0 * @textSize) auto;
 	font-size: @textSize;
 	line-height: 1.15 * @textSize;
@@ -240,4 +254,108 @@ input[type="checkbox"]:checked + div.checkSquare{
 
 ::-webkit-resizer{
 	background: @scrollBarBack;
+}
+
+/*--------------------------------------------*/
+/*---> COLLAPSING HEADER <--------------------*/
+/*--------------------------------------------*/
+
+/*
+* Collapsing Header on Scroll Tutorial:
+* http://callmenick.com/post/animated-resizing-header-on-scroll
+*/
+
+.Center(){
+	margin: 0 auto;
+}
+
+@focusColor: @mainColor;
+@smallFont: @textSize;
+@biggerHeight: 2 * @smallFont;
+@smallerHeight: @smallFont;
+
+@smallMargin: (@smallFont * 0.25);
+
+div.headerSpace{
+	height: (@biggerHeight + (@smallMargin * 3)) * 1.0;
+}
+
+header{
+
+	width: 90vw;
+	padding: (1.5 * @smallMargin) 5vw;
+	height: @biggerHeight;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 15;
+	background: #0B0B0B;
+	border-bottom: @smallMargin solid white;
+	-webkit-transition: height 0.25s;
+	-moz-transition: height 0.25s;
+	-ms-transition: height 0.25s;
+	-o-transition: height 0.25s;
+	transition: height 0.25s;
+
+	.logo{
+		display: inline-block;
+		height: @biggerHeight;
+		line-height: @biggerHeight;
+		//float: left;
+		.Center();
+		-webkit-transition: all 0.25s;
+		-moz-transition: all 0.25s;
+		-ms-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		transition: all 0.25s;
+	}
+
+	#big{
+		height: @biggerHeight;
+		line-height: @biggerHeight;
+	}
+
+	#small{
+		height: 0;
+		line-height: 0;
+	}
+
+	h6{
+		display: inline-block;
+		float: left;
+		height: @biggerHeight;
+		line-height: @biggerHeight;
+		margin-top: @smallFont * 0.5;
+	}
+
+}
+
+header.smaller{
+
+	height: @smallerHeight;
+
+	.logo{
+		height: @smallerHeight;
+		line-height: @smallerHeight;
+		float: left;
+	}
+
+	#big{
+		height: 0;
+		line-height: 0;
+	}
+
+	#small{
+		height: @smallerHeight;
+		line-height: @smallerHeight;
+	}
+
+	h6{
+		margin-top: @smallerHeight * -0.15;
+		display: inline-block;
+		height: @smallerHeight;
+		line-height: @smallerHeight;
+	}
+
 }
