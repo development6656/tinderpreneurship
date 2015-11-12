@@ -113,34 +113,6 @@
 
 		<script type="text/javascript">
 
-			var userDatabase = [];
-
-			function userFactory(data){
-				var user = {
-					uid: data['uid'],
-					google: data['google'],
-					profile: data['profile']
-				}
-				return user;
-			}
-
-			function loadData(){
-				var ref = new Firebase("https://tinderpreneurship.firebaseio.com/users");
-
-				ref.on("value", function(snapshot){
-					var data = snapshot.val();
-					$.each(data, function(key, value){
-						var user = userFactory({
-							uid: key,
-							google: value['google'],
-							profile: value['profile']
-						});
-						userDatabase.push(user);
-					});
-				});
-			}
-
-
 		
 		console.log('LOADED MAIN');
 
