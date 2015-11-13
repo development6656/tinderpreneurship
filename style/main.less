@@ -303,33 +303,29 @@ div#messageBox{
 
 @profileHeight: 55vh;
 
-div#browsingSpace{
+div.people{
 
-	div.people{
+	background: transparent;
+	height: @profileHeight;
+	width: 80vw;
+	border: 5vw solid rgba(255, 255, 255, 0.05);
+	margin: 5vw 2.5vw;
+	overflow-y: scroll;
 
-		background: transparent;
+	h2{
+		color: white;
+	}
+
+	button{
+		position: absolute;
+		z-index: 5;
+		width: 7.5vw;
 		height: @profileHeight;
-		width: 80vw;
-		border: 5vw solid rgba(255, 255, 255, 0.05);
-		margin: 5vw 2.5vw;
-		overflow-y: scroll;
-
-		h2{
-			color: white;
-		}
-
-		button{
-			position: absolute;
-			z-index: 5;
-			width: 7.5vw;
-			height: @profileHeight;
-			line-height: @profileHeight;
-			left: 2.5vw;
-			padding: 0;
-			margin: 0;
-			border-radius: 0;
-		}
-
+		line-height: @profileHeight;
+		left: 2.5vw;
+		padding: 0;
+		margin: 0;
+		border-radius: 0;
 	}
 
 }
