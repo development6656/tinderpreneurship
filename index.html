@@ -68,7 +68,7 @@
 
 		<h2>Describe yourself in two sentences.</h2>
 		<center>
-			<textarea id="profile-description"></textarea>
+			<textarea id="profile-description" onchange="recordChange(this);"></textarea>
 		</center>
 		
 
@@ -84,7 +84,7 @@
 
 		<h2>What qualities of teammates annoy you?</h2>
 		<center>
-			<textarea id="profile-peeves"></textarea>
+			<textarea id="profile-peeves" onchange="recordChange(this);"></textarea>
 		</center>
 
 		<center>
@@ -102,8 +102,6 @@
 		<script type="text/javascript">
 
 		openSection('login');
-
-		displayMessage("Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. ");
 		
 		console.log('LOADED MAIN');
 
