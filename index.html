@@ -71,27 +71,12 @@
 
 		<h2>What skills do you bring to a team?</h2>
 		<form class="checkboxForm" id="profile-strengths">
-			<center id="center-strengths">
-			<script>
-
-			</script>
-			</center>
+			<center id="center-strengths"></center>
 		</form>
 
 		<h2>What skills do you desire in teammates?</h2>
 		<form class="checkboxForm" id="profile-desires">
-			<center>
-			<script>
-				var size = skills.length;
-				for(var s = 0; s < size; s++){
-					document.write(createHTMLCheckbox({
-						name: 'desire',
-						value: skills[s],
-						checked: false
-					}));
-				}
-			</script>
-			</center>
+			<center id="center-desires"></center>
 		</form>
 
 		<h2>What qualities of teammates annoy you?</h2>
