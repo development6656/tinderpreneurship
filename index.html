@@ -36,17 +36,16 @@
 
 		<div class="headerSpace"></div>
 
-		<div id="messageBox">
+		<div id="messageBox" class="close">
+			<h4 onclick="closeMessageBox();">Click to Close</h4>
 			<p id="messageContent">Messages</p>
 			<div class="footerSpace"></div>
 		</div>
 
 	<section id="login">
 
-		<p>What if forming a great team was as simple as swiping right? What if this was a rhetorical question?</p>
+		<p>Tinderpreneurship takes the anxiety out of making great teams with strangers. Try it out for a hackathon or group project today!</p>
 		
-		<p>We created Tinderpreneurship to take the anxiety out of teaming up with strangers. Try it out today!</p>
-
 		<center>
 			<button onclick="googleLogin();">Login with Google</button>
 		</center>
@@ -103,6 +102,8 @@
 		<script type="text/javascript">
 
 		openSection('login');
+
+		displayMessage("Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. ");
 		
 		console.log('LOADED MAIN');
 

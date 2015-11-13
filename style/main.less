@@ -238,17 +238,36 @@ div#messageBox{
 
 	position: fixed;
 	bottom: 0;
-	left: 0;
+	//left: 0;
 	background: @mainDark;
 	width: 100vw;
-	height: auto;
+	height: 50vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
 
-	&.open{
+	h4{
+
+		margin-top: 0;
+		background: @charcoal;
+		color: white;
+		font-size: 0.75 * @textSize;
+		padding: 0.85 * @textSize;
+
+		&:hover{
+			background: white;
+			color: @charcoal;
+		}
+
+		.AnimateAll();
 
 	}
 
-	&.closed{
-		
+	&.open{
+		bottom: 0;
+	}
+
+	&.close{
+		bottom: -50vh;
 	}
 
 	.AnimateAll();
