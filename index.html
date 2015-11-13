@@ -21,17 +21,7 @@
 		<script type="text/javascript" src="lib/profile.js"></script>
 		<style type="text/css">
 
-			section#login{
-				display: none;
-			}
 
-			section#profile{
-				display: block;
-			}
-
-			header, div.headerSpace{
-				display: block;
-			}
 
 		</style>
 	</head>
@@ -46,11 +36,12 @@
 
 		<div class="headerSpace"></div>
 
-	<section id="login">
+		<div id="messageBox">
+			<p id="messageContent">Messages</p>
+			<div class="footerSpace"></div>
+		</div>
 
-		<center>
-			<img class="logo" src="style/img/redlogo.png">
-		</center>
+	<section id="login">
 
 		<p>What if forming a great team was as simple as swiping right? What if this was a rhetorical question?</p>
 		
@@ -111,6 +102,7 @@
 
 		<script type="text/javascript">
 
+		openSection('login');
 		
 		console.log('LOADED MAIN');
 
