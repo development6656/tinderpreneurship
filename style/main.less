@@ -173,9 +173,13 @@ button{
 
 }
 
-	button.menuOption{
-		width: 90vw - 4vh;
-		margin: 2vh auto;
+	section#menu{
+
+		button{
+			width: 90vw - 4vh;
+			margin: 2vh auto;
+		}
+
 	}
 
 textarea{
@@ -290,7 +294,7 @@ input[type="checkbox"]:checked + div.checkSquare{
 @smallMargin: (@smallFont * 0.25);
 
 div.headerSpace{
-	height: (@biggerHeight + (@smallMargin * 3)) * 1.0;
+	height: (@biggerHeight + (@smallMargin * 3)) * 1.0 + 2vh;
 }
 
 header{
@@ -342,6 +346,10 @@ header{
 		margin-top: @smallFont * 0.5;
 	}
 
+	button{
+		display: none;
+	}
+
 }
 
 header.smaller{
@@ -369,6 +377,18 @@ header.smaller{
 		display: inline-block;
 		height: @smallerHeight;
 		line-height: @smallerHeight;
+	}
+
+	button{
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: @biggerHeight - @smallMargin;
+		padding: 0;
+		margin: 0;
+		width: @biggerHeight;
+		border-radius: 0;
 	}
 
 }
