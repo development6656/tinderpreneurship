@@ -41,7 +41,7 @@
 			<center>
 				<img class="logo" src="style/img/redlogo.png">
 			</center>
-			<button id="menuButton">&#8801;</button>
+			<button onclick="openSection('menu');">&#8801;</button>
 		</header>
 
 		<div class="headerSpace"></div>
@@ -65,11 +65,11 @@
 	<section id="menu">
 
 		<center>
-			<button onclick="toggleMenu('login')">Switch Users</button>
-			<button onclick="toggleMenu('profile')">Update Profile</button>
-			<button onclick="toggleMenu('browse')">Browse Profiles</button>
-			<button onclick="toggleMenu('contact')">View Contacts</button>
-			<button onclick="toggleMenu('about')">About</button>
+			<button onclick="openSection('login')">Switch Users</button>
+			<button onclick="openSection('profile')">Update Profile</button>
+			<button onclick="openSection('browse')">Browse Profiles</button>
+			<button onclick="openSection('contact')">View Contacts</button>
+			<button onclick="openSection('about')">About</button>
 		</center>
 
 	</section>
