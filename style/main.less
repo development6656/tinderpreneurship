@@ -294,18 +294,25 @@ div#messageBox{
 /*---> BROWSING <-----------------------------*/
 /*--------------------------------------------*/
 
-div#browsingSpace{
-	height: 50vh;
-	width: 10000vw;
-	overflow-x: scroll;
+@profileHeight: 85vh;
+
+div#browsingContainer{
+	height: @profileHeight;
+	width: 100vw;
+	overflow: scroll;
+
+	div#browsingSpace{
+		width: 100000vw;
+	}
 
 	div.people{
 		background: rgba(255, 255, 255, 0.05);
-		height: 50vh;
+		height: @profileHeight;
 		width: 90%;
 		padding: 5%;
 		overflow-y: scroll;
-		display: inline-block;
+		display: inline;
+		float: left;
 	}
 
 }
