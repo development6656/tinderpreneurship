@@ -21,13 +21,19 @@
 		<script type="text/javascript" src="lib/profile.js"></script>
 		<style type="text/css">
 
+			section{
+				display: none;
+			}
 
+			section#login{
+				display: block;
+			}
 
 		</style>
 	</head>
 	<body>
 
-		<header>
+		<header onmouseover="toggleMenu(true);" onmouseout="toggleMenu(false);">
 			<center>
 				<img class="logo" src="style/img/redlogo.png">
 			</center>
@@ -44,6 +50,7 @@
 
 	<section id="login">
 
+		<h1>Login</h1>
 		<p>Tinderpreneurship takes the anxiety out of making great teams with strangers. Try it out for a hackathon or group project today!</p>
 		
 		<center>
@@ -55,16 +62,18 @@
 	<section id="menu">
 
 		<center>
-			<button onclick="openSection('login')">Switch Users</button>
+			<button onclick="openSection('about')">About</button>
 			<button onclick="openSection('profile')">Update Profile</button>
 			<button onclick="openSection('browse')">Browse Profiles</button>
 			<button onclick="openSection('contact')">View Contacts</button>
-			<button onclick="openSection('about')">About</button>
+			<button onclick="openSection('login')">Switch Users</button>
 		</center>
 
 	</section>
 
 	<section id="profile">
+
+		<h1>Your Profile</h1>
 
 		<h2>Describe yourself in two sentences.</h2>
 		<center>
@@ -93,6 +102,12 @@
 
 	</section>
 
+	<section id="browse"></section>
+
+	<section id="contact"></section>
+
+	<section id="about"></section>
+
 		<div class="footerSpace"></div>
 
 		<footer>
@@ -100,8 +115,6 @@
 		</footer>
 
 		<script type="text/javascript">
-
-		openSection('login');
 		
 		console.log('LOADED MAIN');
 
